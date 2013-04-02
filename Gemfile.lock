@@ -1,0 +1,67 @@
+GIT
+  remote: git://github.com/rtomayko/tilt.git
+  revision: f27016649c1205638a7edbcec67bb4392ac0b9bd
+  specs:
+    tilt (1.3.3)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (3.2.9)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    backports (2.6.2)
+    bootstrap-sass (2.1.1.0)
+    chunky_png (1.2.6)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    eventmachine (1.0.0)
+    fssm (0.2.9)
+    haml (3.1.7)
+    i18n (0.6.1)
+    kgio (2.8.0)
+    multi_json (1.5.0)
+    rack (1.4.1)
+    rack-gauges (1.1.0)
+    rack-heroku-no-such-app (0.0.1)
+      rack (>= 1.2.0, <= 2.0.0)
+    rack-protection (1.2.0)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    raindrops (0.10.0)
+    redcarpet (2.2.2)
+    sass (3.2.3)
+    sinatra (1.3.3)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    sinatra-contrib (1.3.1)
+      backports (>= 2.0)
+      eventmachine
+      rack-protection
+      rack-test
+      sinatra (~> 1.3.0)
+      tilt (~> 1.3)
+    unicorn (4.6.2)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  bootstrap-sass
+  compass
+  haml
+  rack-gauges
+  rack-heroku-no-such-app
+  redcarpet
+  sinatra
+  sinatra-contrib
+  tilt!
+  unicorn

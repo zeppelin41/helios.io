@@ -1,0 +1,151 @@
+%header
+  %hgroup
+    %h1
+      helios
+      %small beta
+    %h2
+      an extensible open-source
+      %br
+      mobile backend framework
+
+%section#overview
+  %img#astronaut{src: "/images/astronaut.png", alt: "Astronaut!", width: "262", height: "287"}
+
+  :markdown
+    Helios is an open-source framework that provides essential backend services for iOS apps, from data synchronization and user accounts to push notifications, in-app purchases, and passbook integration. It allows developers to get a client-server app up-and-running in just a few minutes, and seamlessly incorporate functionality as necessary.
+
+  %img#astronomer{src: "/images/astronomer.png", alt: "Astronomer!", width: "230", height: "248"}
+
+  :markdown
+    Helios is a constellation of mobile backend components—Mix and match to meet the specific needs of your app. Built on the [Rack](http://rack.github.com) webserver interface, Helios can be easy added into any existing [Rails](http://rubyonrails.org) or [Sinatra](http://sinatrarb.com) application, or used by itself.
+
+%section#get-started
+  %h1 Get Started
+
+  :markdown
+    Use the following commands to install Helios, create a new app, and start running the app locally at `http://localhost:5000`
+
+        $ gem install helios
+        $ helios new app
+        $ cd app && helios start
+
+%section#features
+  %h1 Features
+  %dl
+    %dt Data Synchronization
+    %dd Read and write between the client and server over a conventional REST webservice, which can even be automatically-generated from a Core Data model.
+
+    %dt Push Notification
+    %dd A device registration endpoint, paired with an easy-to-use admin interface that lets you manually send push notifications to selected devices.
+
+    %dt In-App Purchases
+    %dd Track and verify all of the transactions made in your application.
+
+    %dt Passbook
+    %dd Everything you need to interface as an Passbook webservice, including pass registration, updating, and notifications.
+
+    %dt Logging & Analytics
+    %dd A powerful way to capture stats and trends from app installations.
+
+%section#deploy
+  %h1 Deploying to Heroku
+
+  %img#rocket{src: "/images/rocket.png", alt: "3...2...1... Blastoff!", width: "260", height: "270"}
+
+  .step-1
+    :markdown
+      ## Install Heroku Toolbelt
+      [Install the Heroku Toolbelt](https://toolbelt.heroku.com), and you'll have everything you need to deploy your Helios application to Heroku, including Git and the heroku terminal command.
+
+  .step-2
+    :markdown
+      ## Create an App
+      In your Helios app directory, do `$ heroku create app-name` (or tempt fate by letting Heroku generate a name for you).
+
+  .step-3
+    :markdown
+      ## 3...2...1... Blastoff!
+      All that's left to do is a
+      `$ git push heroku master`
+      In almost no time at all, your app will be online and operational.
+
+%section#client
+  :markdown
+    # Client Integration
+
+    Of course, that's just the server half of the equation. The following iOS client libraries make it easy to integrate with Helios.
+
+  #ground-control
+    :markdown
+      # [Ground Control](https://github.com/mattt/GroundControl)
+      ## Remote configuration
+
+      GroundControl gives you a dead-simple way to remotely configure your app, allowing you to add things like feature flags, impromptu A/B tests, or a simple "message of the day").
+
+  #cargo-bay
+    :markdown
+      # [Cargo Bay](https://github.com/mattt/CargoBay)
+      ## The Essential StoreKit Companion
+
+      StoreKit is the Apple framework for making In-App Purchases. It's pretty good, but it has a few rough edges. CargoBay smooths out those rough parts by providing one step receipt & transaction verification, and more.
+
+  #sky-lab
+    :markdown
+      # [SkyLab](https://github.com/mattt/SkyLab)
+      ## Multivariate & A/B Testing
+
+      SkyLab is a backend-agnostic framework for multivariate and A/B testing. Test conditions are persisted across sessions and launches using NSUserDefaults, ensuring that every user will have a consistent experience, no matter which testing bucket they end up in.
+
+  #orbiter
+    :markdown
+      # [Orbiter](https://github.com/mattt/Orbiter)
+      ## Push Notification Registration
+
+      Orbiter is a small library that provides simple interfaces to register (and unregister) for Push Notifications with Helios.
+
+  %img#astrodog{src: "/images/astrodog.png", alt: "Astrodog!", width: "230", height: "248"}
+
+  #afnetworking
+    :markdown
+      # [AFNetworking](https://github.com/AFNetworking/AFNetworking)
+      ## A Delightful iOS & OS X Networking Framework
+
+      AFNetworking is a delightful networking library for iOS and Mac OS X. It's built on top of NSURLConnection, NSOperation, and other familiar Foundation technologies. It has a modular architecture with well-designed, feature-rich APIs that are a joy to use.
+
+  #afincrementalstore
+    :markdown
+      # [AFIncrementalStore](https://github.com/AFNetworking/AFIncrementalStore)
+      ## Core Data Persistence with AFNetworking, Done Right
+
+      AFIncrementalStore is an NSIncrementalStore subclass that uses AFNetworking to automatically request resources as properties and relationships are needed.
+
+%footer
+  %a.heroku{href: "http://www.heroku.com", title: "Heroku"}
+    %img{src: "/images/heroku.png"}
+
+  %span.copyright= %{© #{Date.today.year} <a href="http://www.heroku.com/" title="Heroku">Heroku</a>. Created by <a href="http://github.com/mattt" title="Mattt Thompson on GitHub">Mattt Thompson</a>.}
+  %span.license
+    :markdown
+      Helios is released under the [MIT license](http://opensource.org/licenses/MIT).
+  %span.credits
+    :markdown
+      Illustrations by [Erica Sirotich](http://ericasirotich.com)
+
+  .share
+    :plain
+      <iframe src="http://ghbtns.com/github-btn.html?user=helios-framework&repo=helios&type=watch&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="94" height="20"></iframe>
+
+    :plain
+      <iframe src="http://ghbtns.com/github-btn.html?user=mattt&type=follow"
+    allowtransparency="true" frameborder="0" scrolling="0" width="116" height="20"></iframe>
+
+    :plain
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://helios.io" data-via="HeliosMobile">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    :plain
+      <a href="https://twitter.com/HeliosMobile" class="twitter-follow-button" data-show-count="false">Follow @HeliosMobile</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
