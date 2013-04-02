@@ -22,8 +22,6 @@ class Web < Sinatra::Base
   end
 
   get '/' do
-    cache_control :public, :must_revalidate, max_age: 3600
-
     haml :index
   end
 end
